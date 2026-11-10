@@ -22,7 +22,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir site
-          cp index.html favicon.svg site/
+          cp index.html favicon.svg sync-config.js site/
           touch site/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -31,3 +31,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
